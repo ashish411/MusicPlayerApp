@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ashis.musicplayerapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Tiles"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Tiles">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Songs"
+            android:label="Songs"
+            android:parentActivityName=".Tiles">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Tiles" />
+        </activity>
+        <activity
+            android:name=".NowPlaying"
+            android:label="Now Playing"
+            android:parentActivityName=".Tiles">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Tiles" />
+        </activity>
+        <activity android:name=".Artist"
+            android:label="Artist"
+            android:parentActivityName=".Songs">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Songs" />
+        </activity>
+        <activity android:name=".Album"
+            android:label="Album"
+            android:parentActivityName=".Artist">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Artist" />
+        </activity>
+    </application>
+
+</manifest>
